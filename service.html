@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Services-Woodli design</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style footer.css">
+    <link rel="stylesheet" type="text/css" href="style body.css">
+    <link rel="stylesheet" type="text/css" href="style service.css">
+</head>
+<body>
+	<div class="en-tete">
+        <div class="image">
+            <img src="C:\Users\Woodly\Documents\Logo\Woodli logo.PNG" width="120">
+        </div>
+
+        <nav class="menu">
+            <a class="Acceuil" href="index.html">Acceuil</a>
+            <a href="service.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="slogan">
+            <p>The best is here!</p>
+        </div>
+    </div>
+
+<h2>Services & commandes</h2>
+
+<section id="services" class="grid" aria-label="Liste des services">
+  <article class="service-boxes" role="article">
+    <div class="icon"><i class="fa-solid fa-pen-nib"></i></div>
+    <h3>Graphic Design</h3>
+    <p>Création de logos, cartes de visite, flyers, etc.</p>
+  </article>
+
+  <article class="card">
+    <div class="icon"><i class="fa fa-shopping-cart"></i></div>
+    <h3>Vente de logiciel</h3>
+    <p>Dites-nous quel logiciel vous souhaitez acheter.</p>
+    
+  </article>
+
+  <article class="card">
+    <div class="icon"><i class="fa-solid fa-microchip"></i></div>
+    <h3>Vente de SSD</h3>
+    <p>Choisissez la capacité et le type (SATA / NVMe).</p>
+  </article>
+
+</section>
+
+<div class="forms-container">
+<div class="graphic">
+
+<form action="\traitement.php" method="post" >
+  <h3>Demande de service - Graphic Design</h3>
+
+  <label for="nom">Nom complet</label>
+  <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+
+  <label for="email">Adresse e-mail</label>
+  <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+
+  <label for="service">Service</label>
+  <select id="service" name="service" required>
+    <option value="">Choisissez un service</option>
+    <option value="logo">Logo</option>
+    <option value="Cover">Cover</option>
+    <option value="flyer">Flyers professionnelle</option>
+    <option value="Banner">Banner</option>
+    <option value="autre">Autre (précisez dans message)</option>
+  </select>
+
+  <label for="service">Choisissez un plan</label>
+  <select id="plan" name="plan" required>
+    <option value="">Choisissez un plan</option>
+    <option value="1">1 jour- 50$</option>
+    <option value="3">3 jours- 35$</option>
+    <option value="5">5 jours- 20$</option>
+  </select>
+
+  <label for="message">Message</label>
+  <textarea id="message" name="message" placeholder="Décrivez votre projet ou vos besoins..." rows="5"></textarea>
+
+  <button type="submit" class="btn">Envoyer la demande</button>
+
+  
+</form>
+</div>
+<div class="form-card">
+
+        <form action="\traitement.php" method="post">
+            <h3>Commander un SSD</h3>
+        <p class="small">Choisissez la capacité, le type et la quantité.</p>
+
+          <label for="ssd-type">Type SSD</label>
+          <div class="radio-group" role="radiogroup">
+            <label class="radio"><input type="radio" name="type" value="NVMe" checked> NVMe</label>
+            <label class="radio"><input type="radio" name="type" value="SATA"> SATA</label>
+          </div>
+
+          <label for="ssd-cap">Capacité</label>
+          <select id="ssd-cap" name="capacity">
+            <option value="256">256 GB </option>
+            <option value="512">512 GB </option>
+            <option value="1000">1 TB </option>
+            <option value="2000">2 TB </option>
+          </select>
+
+          <label for="adresse">Adresse </label>
+          <textarea id="adresse" name="adresse" placeholder="Entrez votre adresse pour la livraison" rows="3" required></textarea>
+
+
+
+          <label for="ssd-qte">Quantité</label>
+          <input id="ssd-qte" type="number" min="1" value="1" >
+
+          <label for="service">Marque</label>
+  <select id="marque" name="marque" required>
+    <option value="">Choisissez votre marque</option>
+    <option value="Samsung">Samsung</option>
+    <option value="Western Digital (WD)">Western Digital (WD)</option>
+    <option value="Crucial (Micron)">Crucial (Micron)</option>
+    <option value="Kingston">Kingston</option>
+    <option value="autre">Autre (précisez dans message)</option>
+  </select>
+          <label for="ssd-note">Message</label>
+          <textarea id="ssd-note" placeholder="Descrivez votre marque"></textarea>
+
+         
+          <button type="submit" class="btn"> <a href="">Envoyer la commande par e-mail</a></button>
+      
+        </form>
+      </div>
+
+
+</div>
+
+
+
+<div class="form-card">
+    <div class="form-log"> 
+
+        <form action="\traitement.php" method="post">
+            <h3 id="soft-title">Achat de Logiciel</h3>
+        <p class="small">Dites nous de quel logiciel vous avez besoins.</p>
+
+          <label for="soft-name">Nom du logiciel</label>
+          <input id="soft-name" type="text" placeholder="Ex: Adobe Photoshop, Microsoft Office, AutoCAD..." required>
+
+          <label for="soft-notes">Détails / Version souhaitée</label>
+          <textarea id="soft-notes" placeholder="Eg: Version 2024, plateforme Windows/Mac, préférences..." required></textarea>
+
+
+<button type="submit" class="btn"> <a href="">Envoyer la demande par e-mail</a></button>
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer>
+        <div class="pied">
+            <div class="pied-contenue">
+                <div class="A-propos">
+                    <h3>À propos</h3>
+                    <p>Graphiste depuis 2018, je transforme vos idées en créations visuelles uniques.</p>
+                    <ul class="icon">
+                        <li>
+                            <a href="https://www.instagram.com/woodli_design?igsh=NXUxdGZrYzM0NnV4&utm_source=qr" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://x.com/woodlidesign_?s=21&t=TonkolYyv5xFj0KqeJuPMw" target="_blank">
+                                <i class="fab fa-x-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://wa.me/50931370892" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://youtube.com/@woodlidesign?si=8cjsV761MLXeXigb" target="_blank">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pied-contenue">
+                <h3>Liens Rapide</h3>
+                <div class="menu2">
+                    <nav>
+                        <ul class="liste">
+                            <li><a class="Acceuil" href="index.html">Acceuil</a></li>
+                            <li><a href="service.html">Services</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="pied-contenue">
+                <div class="Contact">
+                    <h3>Contact</h3>
+                    <ul class="Contact-icon">
+                        <li>
+                            <a href="mailto: woodmayerol@gmail.com" target="_blank">
+                                <i class="fas fa-envelope"></i> woodmayerol@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://wa.me/50931370892" target="_blank">
+                                <i class="fab fa-whatsapp"></i> +509 3137 08 92
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+50955221162">
+                                <i class="fas fa-phone"></i> +509 5522 11 62
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://maps.app.goo.gl/V2Br6iE5SFrgUULF9" target="_blank">
+                                <i class="fas fa-location-dot"></i> Port-au-prince, Tabarre Haiti
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-bar">
+            <p>&copy; 2025 Woodli Design . All rights reserved</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+/* ---------- Responsivite Mobil & Tablèt ---------- */
+
+/* Mobile (anjeneral < 480px) */
+@media (max-width: 479px) {
+    .service-items {
+        grid-template-columns: 1fr; /* 1 kolòn sou telefòn */
+    }
+
+    header, nav, footer {
+        padding: 10px;
+    }
+}
+
+/* Tablet Portrait (480px - 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+    .service-items {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolòn sou tablet */
+    }
+
+    header, nav, footer {
+        padding: 15px;
+    }
+}
+
+/* Tablet Landscape (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .service-items {
+        grid-template-columns: repeat(3, 1fr); /* 3 kolòn sou tablet pi laj */
+    }
+
+    header, nav, footer
